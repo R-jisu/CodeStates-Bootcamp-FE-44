@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Gowun Batang", serif;
+  text-align: center;
+}
+
+body {
+  width: 65vh;
+  border: 1px none gray;
+  box-shadow: 3px 5px 10px 5px #98ac9c65;
+
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+
+  overflow: scroll;
+}
+
+h2 {
+  text-align: right;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 900;
+
+  margin-bottom: 1rem;
+}
+
+.position {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: rgba(116, 116, 116, 0.782);
+
+  margin-bottom: 2rem;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #c9f4aa39;
+
+  margin-bottom: 2rem;
+}
+
+.srcImg {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.imgText {
+  text-align: center;
+  width: 35vh;
+  margin: 0 auto;
+}
+
+.hightlight {
+  line-height: 3rem;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: #019a3c;
+}
+
+.subtitle {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.395);
+  color: rgba(0, 0, 0, 0.833);
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 1.5rem;
+
+  margin-bottom: 1.2rem;
+  margin-top: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+footer > ul {
+  margin-top: 1rem;
+}
+
+footer li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+a {
+  color: #019a3c;
+}
+
+footer li:hover {
+  color: rgb(123, 202, 123);
+  transform: translateY(-0.3rem);
+  transition: 1s;
+}
