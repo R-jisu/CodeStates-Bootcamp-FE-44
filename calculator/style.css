@@ -110,7 +110,6 @@ Calculator styles
   animation: swing 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 
   transition: 1s;
-  padding-right: 10px;
   overflow: hidden;
 }
 
