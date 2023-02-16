@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  box-sizing: border-box;
+  font-family: "Gowun Batang", serif;
+  color: #000;
+}
+
+body {
+  background: white;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 254, 234, 1) 0%,
+    rgba(255, 254, 234, 1) 35%,
+    #c97a8a 100%
+  );
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+Ocean animation
+*/
+.ocean {
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #504468;
+
+  z-index: -1;
+}
+
+.wave {
+  background: url("./src/wave.svg") repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 5s ease -1s infinite;
+  opacity: 1;
+}
+
+/*keyframes 중간상태를 정의*/
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+/*
+Calculator styles
+*/
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 350px;
+  height: 520px;
+
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(221, 160, 161, 0.67);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -9px 5px -5px #dda0a1;
+  border-radius: 10px;
+
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+.calculator__display--bare {
+  display: flex;
+  justify-content: center;
+}
+.calculator__display--bare > div {
+  width: 299px;
+  height: 159px;
+  border-radius: 10px;
+
+  background-image: url("./src/ocean.jpg");
+  background-size: 299px 170px;
+  box-shadow: inset 1px 2px 4px 2px rgba(0, 0, 0, 0.25);
+
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.calculator__buttons {
+  width: 90%;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.button__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.button__row button.number {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  outline: none;
+  background: rgba(229, 171, 167, 0.1);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.16);
+  border-bottom: 5px solid #835672;
+  color: rgba(131, 86, 114, 0.62);
+
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+}
+
+.clear__and__enter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.enter {
+  width: 350px;
+  height: 30px;
+  background: #835672;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom: 5px solid #664359;
+
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 39px;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.button__row .operator {
+  width: 60px;
+  height: 50px;
+  background: rgba(245, 169, 184, 0.69);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom: 5px solid #835672;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 39px;
+  color: #835672;
+
+  /*글자정렬*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+}
+
+button[class="number"]:hover {
+  transform: translateY(-8px);
+}
+.calculator__buttons button:active {
+  color: rgba(229, 171, 167, 0.341);
+}
+
+button[class="enter"]:hover {
+  transform: translateY(-5px);
+}
+.calculator__buttons button[class="enter"]:active {
+  background-color: #83567286;
+}
+
+button[class*="operator"]:hover {
+  transform: translateY(8px);
+}
