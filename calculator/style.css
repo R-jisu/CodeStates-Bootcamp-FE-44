@@ -101,7 +101,7 @@ Calculator styles
   align-items: center;
 
   width: 350px;
-  height: 520px;
+  height: 540px;
 
   background: rgba(255, 255, 255, 0.38);
   border: 1px solid rgba(221, 160, 161, 0.67);
@@ -133,6 +133,10 @@ Calculator styles
   }
 } -> 부자연스러움*/
 
+button {
+  cursor: pointer;
+}
+
 .calculator__display--bare {
   display: flex;
   justify-content: center;
@@ -146,7 +150,7 @@ Calculator styles
   background-size: 299px 200px;
   box-shadow: inset 1px 2px 4px 2px rgba(0, 0, 0, 0.25);
 
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 5px;
 }
 
@@ -210,7 +214,7 @@ Calculator styles
 
   transition: 0.5s;
   margin-bottom: 10px;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 
 .button__row .operator {
