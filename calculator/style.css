@@ -126,6 +126,13 @@ Calculator styles
   }
 }
 
+/* @keyframes reset {
+  0%,
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+} -> 부자연스러움*/
+
 .calculator__display--bare {
   display: flex;
   justify-content: center;
